@@ -26,17 +26,17 @@ print("Your mission is to find the treasure.")
 #https://www.draw.io/?lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1&title=Treasure%20Island%20Conditional.drawio#Uhttps%3A%2F%2Fdrive.google.com%2Fuc%3Fid%3D1oDe4ehjWZipYRsVfeAx2HyB7LCQ8_Fvi%26export%3Ddownload
 
 
-answer = input("What do you think, where is the island? Left or Right L/R?")
+answer = input("What\'s do you think, where is the island? \'Left\' or \'Right\' \'L\'/\'R\'?").lower()
 
-if (answer == "l") or (answer == "L") or (answer == "left") or (answer == "Left"):
-  answer = input("You can choose the left or the right door? Left or Right L/R")
-  if (answer == "l") or (answer == "L") or (answer == "left") or (answer == "Left"):
-    answer = input("You have to swim or to walk over the mountain. What do you decide for? Swim or Walk?")
-    if (answer == "swim") or (answer == "s") or (answer == "Swim") or (answer == "S"):
-      answer = input("There are three doors, wich one do you choose? The blue, red or yellow onw?")
-      if (answer == "Blue") or (answer == "blue"):
-        print("You are burned by fire. Game Over")
-      elif (answer == "Red") or (answer == "red"):
+if (answer == "l") or (answer == "left"):
+  answer = input("You can choose the left or the right door? Left or Right L/R").lower()
+  if (answer == "l") or (answer == "left"):
+    answer = input("You have to swim or to walk over the mountain. What do you decide for? \"Swim\" or \"Walk\"?").lower()
+    if (answer == "swim") or (answer == "s"):
+      answer = input("There are three doors, wich one do you choose? The blue, \"red\" or \"yellow\" one?").lower()
+      if (answer == "b") or (answer == "blue"):
+        print("You are burned by fire. Game Over").lower()
+      elif (answer == "r") or (answer == "red"):
         print("You are eaten by beasts. Game Over")
       else:
         print("You won the game, congratulation! ;-) ")
@@ -45,7 +45,7 @@ if (answer == "l") or (answer == "L") or (answer == "left") or (answer == "Left"
   else:
     print("It is the other door. Game Over")
 else:
-  print("You fall into a hole. Game Over.")
+  print("You fell into a hole. Game Over.")
 
 
 
